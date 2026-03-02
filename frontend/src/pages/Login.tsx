@@ -23,11 +23,7 @@ const Login = () => {
 
       alert("Login successful ✅");
 
-      if (data.role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/dashboard");
-      }
+      navigate("/dashboard");
 
     } catch (error: any) {
       alert(error.response?.data?.message || "Login failed ❌");
