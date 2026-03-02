@@ -18,7 +18,7 @@ const app = express();
 ============================= */
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://signly-signature.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
@@ -31,7 +31,7 @@ app.use("/uploads", express.static("uploads"));
 
 app.use(
   "/uploads",
-  cors({ origin: "http://localhost:5173" }), // allow CORS for files
+  cors({ origin: ["http://localhost:5173", "https://signly-signature.vercel.app"] }), // allow CORS for files
   express.static(path.join(__dirname, "uploads"))
 );
 

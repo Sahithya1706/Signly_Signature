@@ -246,7 +246,7 @@ router.post("/:id/generate-link", protect, async (req, res) => {
 
     res.json({
       message: "Signing link generated",
-      signingLink: `http://localhost:5173/sign/${token}`,
+      signingLink: `https://signly-signature.vercel.app/sign/${token}`,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
