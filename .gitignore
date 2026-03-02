@@ -51,4 +51,3 @@ backend/uploads/
 # =============================
 .cache/
 
-frontend/src/firebase.ts
