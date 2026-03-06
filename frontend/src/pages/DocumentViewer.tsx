@@ -372,8 +372,8 @@ const DocumentViewer = () => {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
           >
-            <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex justify-center">              <iframe
-              src={`${fileUrl}#toolbar=1&zoom=page-width`} className="w-[850px] h-[1100px] bg-white shadow-xl pointer-events-none"
+            <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex justify-center pointer-events-none">              <iframe
+              src={`${fileUrl}#toolbar=1&zoom=page-width`} className="w-[850px] h-[1100px] bg-white shadow-xl"
             />
             </div>
 
