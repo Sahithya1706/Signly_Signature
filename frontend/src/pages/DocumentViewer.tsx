@@ -365,12 +365,12 @@ const DocumentViewer = () => {
             onMouseUp={handleMouseUp}
             style={{ cursor: isAddMode ? "crosshair" : "default" }}
           >
-            <iframe
-              src={fileUrl}
-              width="100%"
-              height="800px"
-              className="pointer-events-none"
-            />
+            <div className="w-full h-[85vh] overflow-auto bg-gray-200 flex justify-center">
+              <iframe
+                src={`${fileUrl}#toolbar=1`}
+                className="w-[900px] h-[1200px] bg-white shadow-lg"
+              />
+            </div>
 
             {signatures.map((sig) => (
               <div
