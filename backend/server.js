@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const fs = require("fs");
 const documentRoutes = require("./routes/documentRoutes");
 const authRoutes = require("./routes/authRoutes");
 const path = require("path");
@@ -12,6 +13,11 @@ const adminRoutes = require("./routes/adminRoutes");
 dotenv.config();
 
 const app = express();
+
+// Ensure uploads folder exists
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 
 /* =============================
    🔥 GLOBAL CORS CONFIG
